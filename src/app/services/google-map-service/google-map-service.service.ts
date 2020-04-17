@@ -203,7 +203,7 @@ export class GoogleMapService {
 
   getGeoCodefromGoogleAPI(lat, lng): Promise<any> {
     var latlng = lat + ", " + lng;
-    var url = "https://maps.googleapis.com/maps/api/geocode/json?latlng=" + latlng + "&sensor=false&key=AIzaSyBjf3O4cxmOeWhOI0kV2KB-YL9HmRZzVaI";
+    var url = "https://maps.googleapis.com/maps/api/geocode/json?latlng=" + latlng + "&sensor=false&key=";
     return this._httpClient.get(url)
       // .pipe(map(res => res.json()))
       .toPromise();
