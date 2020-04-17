@@ -1,0 +1,41 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Map
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <!-- <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Tab 1</ion-title>
+    </ion-toolbar>
+  </ion-header> -->
+  <!--create a element for map. #Map - identifier -->
+  <ion-card>
+    <!-- <ion-card-header>
+      <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+      <ion-card-title>Card Title</ion-card-title>
+    </ion-card-header> -->
+
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col *ngIf="filter">
+            <ion-item>
+              <ion-label>Search ... </ion-label>
+              <ion-input type="text" [(ngModel)]="filter.input" [ngModelOptions]="{standalone: true}"></ion-input>
+            </ion-item>
+          </ion-col>
+          <ion-col>
+            <ion-button color="light">Light</ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+
+  <div #Map class="map"></div>
+  <!-- <app-explore-container name="Tab 1 page"></app-explore-container> -->
+</ion-content>
